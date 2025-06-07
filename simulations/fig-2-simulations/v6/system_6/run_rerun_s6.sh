@@ -1,0 +1,32 @@
+#!/bin/bash
+#SBATCH --job-name=euan_mik_job           # Job name
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=40
+#SBATCH --mail-type=END,FAIL          # Mail events (NONE, BEGIN, END, FAIL, AL$
+#SBATCH --mail-user=euan.joly.smith@utoronto.ca # Where to send mail
+#SBATCH --time=24:00:00
+#SBATCH --job-name rerun_s6
+#SBATCH --output=rerun_s6_output_%j.txt
+#SBATCH --mail-user=euan.joly.smith@utoronto.ca
+#SBATCH --mail-type=ALL
+
+
+
+#source /scratch/smitheua/venv/bin/activate
+#pip install numpy
+
+#module load NiaEnv/2019b
+
+#module load python/3.8.5
+
+#module load scipy-stack
+cd $SCRATCH
+
+module load python/3.10
+module load scipy-stack
+
+
+python -u s6_v1_rerun_e.py 40 1
+python -u s6_v2_rerun_e.py 40 1
+python -u s6_v3_rerun_e.py 40 1
+
