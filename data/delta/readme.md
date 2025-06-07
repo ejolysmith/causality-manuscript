@@ -6,12 +6,12 @@ contain a different set of cells.
 
 For instance, for cells in field of view defined as pos12, there is the following:
 cfp_purged_pos12-purge2.pkl (a series of lists of cfp measurements, where each list is a cell, and each element is a single time point snapshot).
-yfp_purged_pos12-purge2.pkl (same but yfp)
-rfp_purged_pos12-purge2.pkl (same buy rfp)
-areas_purged_pos12-purge2.pkl (same but single cell segmented areas)
-lengths_purged_pos12-purge2.pkl (same but single cell length)
-frames_purged_pos12-purge2.pkl (a series of lists where each list is a cell, and each element is the time point indice at which measurment was taken)
-frames_purged_xpixels12-purge2.pkl (a single list where each element is the x position of a cell in FOV in pixels)
+yfp_purged_pos12-purge2.pkl (same but yfp).
+rfp_purged_pos12-purge2.pkl (same buy rfp).
+areas_purged_pos12-purge2.pkl (same but single cell segmented areas).
+lengths_purged_pos12-purge2.pkl (same but single cell length).
+frames_purged_pos12-purge2.pkl (a series of lists where each list is a cell, and each element is the time point indice at which measurment was taken).
+frames_purged_xpixels12-purge2.pkl (a single list where each element is the x position of a cell in FOV in pixels).
 
 In addition, analogous files are added with subscript "_b" in filename which correpsond to cells that have lost the plasmid. These are used 
 for background signal correction. 
