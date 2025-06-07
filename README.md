@@ -1,4 +1,4 @@
-# causality-manuscript
+# Exploiting fluctuations in gene expression to detect causal interactions between genes
 Data and analysis code for eLife manuscript "Exploiting fluctuations in gene expression to detect causal interactions between genes".
 
 This repository is organized as follows:
