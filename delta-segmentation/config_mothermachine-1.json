@@ -1,0 +1,44 @@
+{
+    "presets": "custom",
+    "models": [
+        "rois",
+        "segmentation",
+        "tracking"
+    ],
+    "model_file_rois": "models/all_chambers_id_bf.hdf5",
+    "model_file_seg": "models/unet_moma_seg_63xoilBf1.3_nomini.hdf5",
+    "model_file_track": "/home/euan/anaconda3/envs/tf_gpu/lib/python3.9/site-packages/delta/assets/models/unet_moma_track.hdf5",
+    "target_size_rois": [
+        512,
+        2048
+    ],
+    "target_size_seg": [
+        256,
+        48
+    ],
+    
+    "target_size_track": [
+        256,
+        32
+    ],
+    
+    "training_set_rois": "/home/euan/anaconda3/envs/tf_gpu/lib/python3.9/site-packages/delta/assets/trainingsets/mothermachine/training/segmentation_set/train",
+    "training_set_seg": "/home/euan/anaconda3/envs/tf_gpu/lib/python3.9/site-packages/delta/assets/trainingsets/mothermachine/training/segmentation_set/train_multisets",
+    "training_set_track": "/home/euan/anaconda3/envs/tf_gpu/lib/python3.9/site-packages/delta/assets/trainingsets/mothermachine/training/tracking_set/train_multisets",
+    "eval_movie": "/home/euan/Desktop/pos1/test/",
+    "rotation_correction": true,
+    "drift_correction": true,
+    "crop_windows": true,
+    "min_roi_area": 500,
+    "whole_frame_drift": true,
+    "min_cell_area": 150,
+    "save_format": [
+        "pickle",
+        "legacy",
+        "movie"
+    ],
+    "TF_CPP_MIN_LOG_LEVEL": "2",
+    "memory_growth_limit": null,
+    "pipeline_seg_batch": 50,
+    "pipeline_track_batch": 50
+}
